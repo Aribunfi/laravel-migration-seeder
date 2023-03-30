@@ -14,16 +14,16 @@ return new class extends Migration
     public function up()
     {
         Schema::table('trains', function (Blueprint $table) {
-            $table->id();
+            $table->integer('id');
             $table->string('azienda');
-            $table->string(da);
-            $table->string(a);
-            $table->dateTime(partenza);
-            $table->dateTime(arrivo);
-            $table->string(codice);
-            $table->smallInteger(carrozze);
-            $table->boolean(puntuale);
-            $table->boolean(cancellato);
+            $table->string('da');
+            $table->string('a');
+            $table->dateTime('partenza');
+            $table->dateTime('arrivo');
+            $table->string('codice');
+            $table->smallInteger('carrozze');
+            $table->boolean('puntuale');
+            $table->boolean('cancellato');
 
         });
     }
@@ -36,16 +36,16 @@ return new class extends Migration
     public function down()
     {
         Schema::table('trains', function (Blueprint $table) {
-            $table->dropColumn();
+            $table->dropColumn('id');
             $table->dropColumn('azienda');
-            $table->dropColumn(da);
-            $table->dropColumn(a);
-            $table->dropColumn(partenza);
-            $table->dropColumn(arrivo);
-            $table->dropColumn(codice);
-            $table->dropColumn(carrozze);
-            $table->dropColumn(puntuale);
-            $table->dropColumn(cancellato);
+            $table->dropColumn('da');
+            $table->dropColumn('a');
+            $table->dropColumn('partenza');
+            $table->dropColumn('arrivo');
+            $table->dropColumn('codice');
+            $table->dropColumn('carrozze');
+            $table->dropColumn('puntuale');
+            $table->dropColumn('cancellato');
         });
     }
 };
