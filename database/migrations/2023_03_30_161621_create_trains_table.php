@@ -14,7 +14,17 @@ return new class extends Migration
     public function up()
     {
         Schema::table('trains', function (Blueprint $table) {
-            //
+            $table->id();
+            $table->string('azienda');
+            $table->string(da);
+            $table->string(a);
+            $table->dateTime(partenza);
+            $table->dateTime(arrivo);
+            $table->string(codice);
+            $table->smallInteger(carrozze);
+            $table->boolean(puntuale);
+            $table->boolean(cancellato);
+
         });
     }
 
