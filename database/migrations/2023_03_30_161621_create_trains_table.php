@@ -36,7 +36,16 @@ return new class extends Migration
     public function down()
     {
         Schema::table('trains', function (Blueprint $table) {
-            //
+            $table->dropColumn();
+            $table->dropColumn('azienda');
+            $table->dropColumn(da);
+            $table->dropColumn(a);
+            $table->dropColumn(partenza);
+            $table->dropColumn(arrivo);
+            $table->dropColumn(codice);
+            $table->dropColumn(carrozze);
+            $table->dropColumn(puntuale);
+            $table->dropColumn(cancellato);
         });
     }
 };
